@@ -1,0 +1,16 @@
+
+services:
+  - type: web
+    name: latest-uploader
+    env: docker
+    plan: free
+    repo: https://github.com/your-username/your-repo-name
+    branch: main
+    autoDeploy: true
+    envVars:
+      - key: BOT_TOKEN
+        value: 8086953920:AAGYBOwM4ysQ0bZKrOJn0IADQE439nz1t2E
+      - key: API_ID
+        value: 28748671
+      - key: API_HASH
+        value: f53ec7c41ce34e6d585674ed9ce6167c
