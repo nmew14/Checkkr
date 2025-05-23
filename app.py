@@ -1,4 +1,5 @@
 from flask import Flask, request
+import os
 
 app = Flask(name)
 
@@ -9,10 +10,9 @@ def hello():
 @app.route('/', methods=['POST'])
 def webhook():
     data = request.get_json()
-    print(data)  # Sirf test ke liye
+    print(data)  # For testing
     return 'OK', 200
 
 if name == "main":
-    import os
-    port = int(os.environ.get("PORT", 5000))  # Render ka port
+    port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
